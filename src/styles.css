@@ -5,3 +5,25 @@ body {
     height: 100%;
     box-sizing: border-box;
 }
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.portrait-container {
+  position: relative;
+}
+
+img.portrait {
+  max-height: 650px;
+}
+
+.name {
+  color: red;
+}
+
+.projects-container {
+  display: grid;
+  
+}

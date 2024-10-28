@@ -9,22 +9,74 @@ body {
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 4rem;
 }
 
 .portrait-container {
   position: relative;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
+  background-color: tomato;
 }
 
 img.portrait {
-  max-height: 650px;
+  max-height: 600px;
 }
 
-.name {
-  color: red;
+h2.name {
+  color: white;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.272);
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.desc-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  min-height: 300px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
+  padding: 2rem;
+}
+
+.desc-text {
+  font-size: 1.8rem;
+}
+
+.socials-container {
+  align-self: flex-end;
+}
+
+main {
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+}
+
+.project-container {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
+  width: 450px;
+  height: 450px;
+  padding: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #0891b2;
+  color: white;
+  padding: 3rem;
 }

@@ -13,11 +13,12 @@ body {
 
 .top-background {
   position: absolute;
-  background-color: #0891b2;
-  width: 3000px;
-  height: 1000px;
+  background-color: #7d0c19;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  transform: rotateZ(-10deg) translate(-25%, -40%);
+  transform: skewY(-10deg);
+  transform-origin: 0;
 }
 
 header {
@@ -29,7 +30,7 @@ header {
 
 .portrait-container {
   position: relative;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.165);
   background-color: tomato;
   max-height: 800px;
   background-color: var(--main-bg-color);
@@ -57,7 +58,7 @@ h2.name {
   flex-direction: column;
   max-width: 800px;
   min-height: 300px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.165);
   padding: 2rem;
   background-color: var(--main-bg-color);
 }
@@ -78,11 +79,17 @@ h2.name {
 }
 
 main {
-  margin: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-inline: auto;
+  margin-block: 4rem;
+  width: min(100% - 50px, 1700px);
+}
+
+.main-header {
+  align-self: flex-start;
 }
 
 .main-header-text {
@@ -91,15 +98,16 @@ main {
 
 .projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
 }
 
 .project-container {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.165);
+  background-color: var(--main-bg-color);
   width: 500px;
   height: 600px;
-  background-color: var(--main-bg-color);
 }
 
 .project-screenshot {
@@ -112,6 +120,7 @@ main {
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
+  padding: 1rem;
 }
 
 .project-socials {
@@ -124,14 +133,21 @@ main {
   cursor: pointer;
 }
 
+.project-desc-text {
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: gray;
+}
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background-color: #0891b2;
+  background-color: #7d0c19;
   color: white;
   padding: 3rem;
+  font-size: 1.5rem;
 }
 
 .socials-footer {
@@ -142,4 +158,8 @@ footer {
 .socials-footer img {
   width: 42px;
   cursor: pointer;
+}
+
+.footer-portrait img {
+  max-width: 1000px;
 }

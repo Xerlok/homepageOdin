@@ -2,7 +2,6 @@
   --main-bg-color: white;
 }
 
-
 html,
 body {
     margin: 0px;
@@ -19,6 +18,7 @@ body {
   z-index: -1;
   transform: skewY(-10deg);
   transform-origin: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.165);
 }
 
 header {
@@ -99,7 +99,7 @@ main {
 .projects-container {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
 
@@ -162,4 +162,40 @@ footer {
 
 .footer-portrait img {
   max-width: 1000px;
+}
+
+@media (max-width: 810px) {
+  header {
+
+  }
+
+  .portrait-container {
+    max-height: 600px;
+  }
+  
+  img.portrait {
+    max-height: 600px;
+  }
+  
+  h2.name {
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.471);
+    position: absolute;
+    font-size: 4rem;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    margin-bottom: 0;
+    width: max-content;
+  }
+  
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .project-container {
+    width: auto;
+    height: 400px;
+  }
 }

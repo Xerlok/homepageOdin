@@ -280,7 +280,7 @@ footer {
   }
 
   header {
-    height: 100%;
+    height: min-content;
     display: flex;
     flex-direction: column;
     padding: 2rem;

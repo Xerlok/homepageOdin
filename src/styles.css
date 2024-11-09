@@ -198,4 +198,8 @@ footer {
     width: auto;
     height: 400px;
   }
+
+  .footer-portrait img {
+    max-width: 500px;
+  }
 }

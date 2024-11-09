@@ -26,6 +26,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 3rem;
 }
 
 .portrait-container {
@@ -146,8 +147,42 @@ footer {
   gap: 2rem;
   background-color: #7d0c19;
   color: white;
-  padding: 3rem;
+  padding: 6rem;
   font-size: 1.5rem;
+}
+
+.contacts-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contacts-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone-number img {
+  filter: invert(100%) sepia(16%) saturate(2%) hue-rotate(72deg) brightness(106%) contrast(101%);
+  width: 42px;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email img {
+  filter: invert(100%) sepia(16%) saturate(2%) hue-rotate(72deg) brightness(106%) contrast(101%);
+  width: 42px;
 }
 
 .socials-footer {
@@ -160,34 +195,51 @@ footer {
   cursor: pointer;
 }
 
-.footer-portrait img {
+.footer-portrait picture img {
   max-width: 1000px;
 }
 
 @media (max-width: 810px) {
-  header {
+  .top-background {
+    width: 100%;
+    height: 60%;
+    z-index: -1;
+    transform: skewY(-10deg);
+    transform-origin: 0;
+  }
 
+  header {
+    height: 60%;
+    display: inline-block;
   }
 
   .portrait-container {
-    max-height: 600px;
+    max-height: 500px;
+    max-width: 400px;
+    float: left;
+    margin-right: 2rem;
   }
   
   img.portrait {
-    max-height: 600px;
+    max-height: 500px;
   }
   
   h2.name {
-    color: white;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.471);
-    position: absolute;
     font-size: 4rem;
-    bottom: 3%;
-    left: 50%;
+    top: 3%;
+    left: 125%;
     transform: translateX(-50%);
-    margin-top: 0;
-    margin-bottom: 0;
-    width: max-content;
+  }
+
+  .desc-container {
+    display: block;
+    margin-top: 6rem;
+    margin-left: 6rem;
+    min-height: 550px;
+  }
+
+  .socials-container {
+    float: right;
   }
   
   .projects-container {
@@ -199,7 +251,15 @@ footer {
     height: 400px;
   }
 
-  .footer-portrait img {
-    max-width: 500px;
+  footer {
+    padding: 1.5rem;
+  }
+
+  .contacts-container {
+    gap: 1rem;
+  }
+
+  .footer-portrait picture img {
+    max-width: 450px;
   }
 }
